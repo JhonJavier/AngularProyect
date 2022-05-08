@@ -12,7 +12,7 @@ export class FormModalidadComponent implements OnInit {
 
   //Instanciamos la clase modalidad
   modalidad:Modalidad = new Modalidad();
-  titulo:string="Registrar de Modalidad";
+  titulo:string="Registrar Modalidad";
 
   constructor(private modalidadService: ModalidadService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
