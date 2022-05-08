@@ -17,7 +17,7 @@ export class ModalidadService {
     return this.http.get<Modalidad[]>(this.url);
   }
 
-  //crear modalidad
+  //crear nueva modalidad
   create(modalidad:Modalidad):Observable<Modalidad>{
     return this.http.post<Modalidad>(this.url, modalidad);
   }
