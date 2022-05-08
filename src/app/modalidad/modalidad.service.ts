@@ -17,7 +17,7 @@ export class ModalidadService {
     return this.http.get<Modalidad[]>(this.url);
   }
 
-  //crear estudiante
+  //crear modalidad
   create(modalidad:Modalidad):Observable<Modalidad>{
     return this.http.post<Modalidad>(this.url, modalidad);
   }
@@ -27,12 +27,12 @@ export class ModalidadService {
     return this.http.get<Modalidad>(this.url+'/'+id_modalidad);
   }
 
-  //actualizar estudiante
+  //actualizar modalidad
   update(modalidad:Modalidad):Observable<Modalidad>{
     return this.http.put<Modalidad>(this.url, modalidad);
   }
 
-  //eliminar estudiante
+  //eliminar modalidad
   delete(id_modalidad:number):Observable<Modalidad>{
     return this.http.delete<Modalidad>(this.url+'/'+id_modalidad);
   }
