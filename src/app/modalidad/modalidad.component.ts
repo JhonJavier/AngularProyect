@@ -21,4 +21,13 @@ export class ModalidadComponent implements OnInit {
     );
   }
 
+  delete(modalidad:Modalidad): void{
+    console.log("Eliminando registro");
+    this.modalidadService.delete(modalidad.id_modalidad).subscribe(
+      res => this.modalidadService.getAll().subscribe(
+        response =>this.modalidad=response
+      )
+    );
+  }
+
 }

@@ -9,33 +9,36 @@
                     class="form-control"
                     name="descripcion" 
                     [(ngModel)]="modalidad.descripcion">
-              </div>
-              <div class="mb-3">
+            </div>
+            <div class="mb-3">
                 <label for="hora_inicio" class="form-label">Hora de Inicio</label>
                 <input 
                     type="datetime-local" 
                     class="form-control" 
                     name="hora_inicio"
                     [(ngModel)]="modalidad.hora_inicio">
-              </div>
-              <div class="mb-3">
+            </div>
+            <div class="mb-3">
                 <label for="hora_fin" class="form-label">Hora Fin</label>
                 <input 
                     type="datetime-local" 
                     class="form-control" 
                     name="hora_fin"
                     [(ngModel)]="modalidad.hora_fin">
-              </div>
-              <button class="btn btn-success"
-                    role="button"
-                    (click)="create()">
-                  Registrar
-              </button>
-              <button class="btn btn-primary"
-                    role="button"
+            </div>
+            <button class="btn btn-success"
+                role="button"
+                (click)="create()"
+                *ngIf="!modalidad.id_modalidad else elseBlock">
+                Registrar
+            </button>
+            <ng-template #elseBlock>
+                <button class="btn btn-primary" 
+                    role="button" 
                     (click)="update()">
-                  Actualizar
-              </button>
+                    Actualizar
+                </button>
+            </ng-template>
         </form>
     </div>
 </div>

@@ -9,6 +9,7 @@ import { Modalidad } from './modalidad';
 export class ModalidadService {
 
   private url:string="http://localhost:9070/modalidad";
+  private url2:string="http://localhost:9070/modalidad/";
 
   constructor(private http:HttpClient) { }
 
@@ -29,7 +30,7 @@ export class ModalidadService {
 
   //actualizar modalidad
   update(modalidad:Modalidad):Observable<Modalidad>{
-    return this.http.put<Modalidad>(this.url, modalidad);
+    return this.http.put<Modalidad>(this.url2, modalidad);
   }
 
   //eliminar modalidad
