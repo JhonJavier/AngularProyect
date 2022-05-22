@@ -22,7 +22,7 @@ export class ModalidadService {
     return this.http.post<Modalidad>(this.url, modalidad);
   }
 
-  //Obtener modalidad por un id
+  //Obtener modalidad por un id de modalidad
   get(id_modalidad:number):Observable<Modalidad>{
     return this.http.get<Modalidad>(this.url+'/'+id_modalidad);
   }
