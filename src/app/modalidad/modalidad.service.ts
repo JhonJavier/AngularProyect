@@ -27,7 +27,7 @@ export class ModalidadService {
     return this.http.get<Modalidad>(this.url+'/'+id_modalidad);
   }
 
-  //actualizar modalidad
+  //actualizar modalidad ver por id
   update(modalidad:Modalidad):Observable<Modalidad>{
     return this.http.put<Modalidad>(this.url, modalidad);
   }
