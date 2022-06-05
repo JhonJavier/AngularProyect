@@ -22,12 +22,12 @@ export class ModalidadService {
     return this.http.post<Modalidad>(this.url, modalidad);
   }
 
-  //Obtener modalidad por un id de modalidad
+  //Obtener modalidad por un id 
   get(id_modalidad:number):Observable<Modalidad>{
     return this.http.get<Modalidad>(this.url+'/'+id_modalidad);
   }
 
-  //actualizar modalidad ver por id
+  //actualizar modalidad cambiar id
   update(modalidad:Modalidad):Observable<Modalidad>{
     return this.http.put<Modalidad>(this.url, modalidad);
   }
